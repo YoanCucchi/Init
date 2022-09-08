@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ifconfig | grep broadcast | awk '{print $6}'
+arp | awk '{print $1}'
