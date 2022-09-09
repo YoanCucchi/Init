@@ -1,3 +1,0 @@
-1. debian version can be found in etc/issue
-2. hostnamectl command
-3 uptime -p

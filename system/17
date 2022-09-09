@@ -1,0 +1,2 @@
+# command ssh with user name and the host IP
+ssh user@hostname

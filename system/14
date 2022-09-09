@@ -1,0 +1,2 @@
+# & to launch in background
+sudo tail -f /var/log/syslog &

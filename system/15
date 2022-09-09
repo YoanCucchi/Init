@@ -1,0 +1,2 @@
+# -f for full arguments lists not only process names
+pkill -f tail

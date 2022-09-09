@@ -1,0 +1,2 @@
+# normal users UID start at 1000
+getent passwd {1000..6000} | cut -d: -f1

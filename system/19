@@ -1,0 +1,2 @@
+# --state=enabled to get only enabled services
+systemctl list-unit-files --state=enabled
