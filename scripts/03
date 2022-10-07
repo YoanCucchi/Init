@@ -5,11 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ycucchi <yoan066@yahoo.fr>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/07 16:55:14 by ycucchi           #+#    #+#              #
-#    Updated: 2022/10/07 16:55:16 by ycucchi          ###   ########.fr        #
+#    Created: 2022/10/07 17:18:22 by ycucchi           #+#    #+#              #
+#    Updated: 2022/10/07 17:18:25 by ycucchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
 
-/etc/hostname
+echo "Do you want to enable Dark-mode or Light-mode? [dark/light]"
+read theme
+if [ $theme = 'dark' ]
+then
+	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+	printf "You can now open your eyes!"
+elif [ $theme = 'light' ]
+then
+	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+	printf "Your eyes will be burning now, good luck"
+else
+	printf "You just need to choose between 'dark' or 'light'"
+fi

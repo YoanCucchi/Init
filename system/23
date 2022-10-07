@@ -1,3 +1,14 @@
-# question is weird but if i understand correctly
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    23                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ycucchi <yoan066@yahoo.fr>                 +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/07 16:57:37 by ycucchi           #+#    #+#              #
+#    Updated: 2022/10/07 16:57:38 by ycucchi          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 for graphic session : boot the system and enter our username and password
 for ssh : same as question 17, ssh user@hostname and enter password if asked

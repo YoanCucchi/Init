@@ -1,15 +1,28 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    24                                                 :+:      :+:    :+:    #
+#    02                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: ycucchi <yoan066@yahoo.fr>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/07 16:57:44 by ycucchi           #+#    #+#              #
-#    Updated: 2022/10/07 16:57:45 by ycucchi          ###   ########.fr        #
+#    Created: 2022/10/07 17:41:50 by ycucchi           #+#    #+#              #
+#    Updated: 2022/10/07 17:41:53 by ycucchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
 
-apt list --installed
+echo "Which user do you want to delete?"
+read username
+echo "Are you sure [yes/no]?"
+read answer
+if [ $answer = $(whoami) ]
+	printf "You can't delete yourself!"
+elif [ $answer = 'yes' ]
+then
+	sudo killall -u $username
+	sudo userdel -rf $username
+	printf "${username} is no more"
+else
+	printf "Failed to delete ${username}"
+fi
